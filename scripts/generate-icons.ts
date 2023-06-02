@@ -4,7 +4,7 @@ import { spawnSync } from 'child_process';
 
 import { transform } from '@svgr/core';
 
-import { formatToken } from '~/shared/helpers/string';
+import { formatToken } from './src/shared/helpers/string';
 
 import type { Config } from '@svgr/core';
 
@@ -14,8 +14,8 @@ const colors = {
 	blue: '\x1b[34m',
 };
 
-const sourceFolder = './src/app/assets/icons';
-const targetFolder = './src/app/components/media/icons';
+const sourceFolder = './src/renderer/assets/icons';
+const targetFolder = './src/renderer/components/media/icons';
 
 const config: Config = {
 	expandProps: 'end',
