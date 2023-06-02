@@ -1,19 +1,53 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "sourceMap": false,
-    "strict": true,
-    "jsx": "preserve",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": true
-  }
+	"compilerOptions": {
+		// type checking
+		"strict": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noUncheckedIndexedAccess": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+		"useUnknownInCatchVariables": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+
+		// modules
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"types": ["vitest/globals"],
+
+		// emit
+		"downlevelIteration": true,
+		"sourceMap": false,
+
+		// javascript support
+		"allowJs": true,
+		"checkJs": true,
+
+		// interop constraints
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"importsNotUsedAsValues": "error",
+		"verbatimModuleSyntax": true,
+
+		// language and environment
+		"jsx": "react-jsx",
+		"target": "esnext",
+
+		// output formatting
+		"noErrorTruncation": true,
+
+		// completeness
+		"skipLibCheck": true
+	},
 }
