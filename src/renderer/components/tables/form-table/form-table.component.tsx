@@ -5,9 +5,6 @@ import {
 	Send as SubmitIcon,
 } from '@mui/icons-material';
 import { Box } from '@mui/material';
-import { useState } from 'react';
-import { z } from 'zod';
-
 import { CustomButton } from '@renderer/components/controls/custom-button';
 import { GeneralDialog } from '@renderer/components/dialogs/general-dialog';
 import { FormField } from '@renderer/components/forms/form-field';
@@ -15,7 +12,9 @@ import { GeneralTable } from '@renderer/components/tables/general-table';
 import { ResponseTable } from '@renderer/components/tables/response-table';
 import { csx } from '@renderer/helpers/style';
 import { isStatusAction, useStatus } from '@renderer/hooks/status';
-import { _localIdSchema, createLocalId } from '~/shared/helpers/data';
+import { useState } from 'react';
+import { z } from 'zod';
+import { _localIdSchema, createLocalId } from '@shared/helpers/data';
 
 import { formTableStyles as styles } from './form-table.styles';
 
@@ -31,6 +30,7 @@ import type {
 } from '@renderer/schemas';
 import type { App } from '@renderer/types/app';
 import type { FormTableProps } from './form-table.types';
+
 
 export const FormTable = <
 	Zod extends z.ZodObject<Record<string, FormFieldZodType>, 'strict'>,
@@ -101,7 +101,6 @@ export const FormTable = <
 				actions={actions?.field?.[field.name]}
 				disableActions={actions?.disabled}
 				fullButtonActions={actions?.fullButtons}
-				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 				options={(lists?.[field.name as never] ?? []) as never}
 				sx={csx(
 					passedStyles?.formField,

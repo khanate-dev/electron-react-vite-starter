@@ -1,8 +1,8 @@
-import { humanizeToken } from '~/shared/helpers/string';
+import { humanizeToken } from '@shared/helpers/string';
 
+import type { ZodDatetime, ZodDbId } from '@shared/helpers/schema';
+import type { Utils } from '@shared/types/utils';
 import type { z } from 'zod';
-import type { ZodDatetime, ZodDbId } from '~/shared/helpers/schema';
-import type { Utils } from '~/shared/types/utils';
 
 export type ViewFieldZodType =
 	| z.ZodString

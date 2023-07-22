@@ -1,11 +1,11 @@
 import { Link } from '@mui/material';
 import { forwardRef } from 'react';
 import { NavLink as RouterLink } from 'react-router-dom';
-
-import { humanizeToken } from '~/shared/helpers/string';
+import { humanizeToken } from '@shared/helpers/string';
 
 import type { LinkProps } from '@mui/material';
 import type { ReactNode, Ref } from 'react';
+
 
 export type AppLinkProps = {
 	/** the relative route for this link */

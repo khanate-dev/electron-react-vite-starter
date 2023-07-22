@@ -1,5 +1,4 @@
 import { alpha, darken, lighten } from '@mui/material';
-
 import { getOppositeColor } from '@renderer/helpers/style';
 
 import type { Theme } from '@mui/material';

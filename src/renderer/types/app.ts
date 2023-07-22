@@ -1,13 +1,13 @@
-import type { ReactNode } from 'react';
-import type { z } from 'zod';
-import type { ENVIRONMENTS } from '~/app/config';
-import type { _localIdSchema } from '~/shared/helpers/data';
+import type { ENVIRONMENTS } from '@renderer/config';
+import type { _localIdSchema } from '@shared/helpers/data';
 import type {
 	NumberSelection,
 	StringSelection,
 	dbIdSchema,
-} from '~/shared/helpers/schema';
-import type { Utils } from '~/shared/types/utils';
+} from '@shared/helpers/schema';
+import type { Utils } from '@shared/types/utils';
+import type { ReactNode } from 'react';
+import type { z } from 'zod';
 
 export declare namespace App {
 	/** global union type of possible app environment */

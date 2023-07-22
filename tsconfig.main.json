@@ -1,8 +1,20 @@
 {
-  "extends": "./tsconfig.base.json",
-  "include": ["electron.vite.config.ts", "vitest.config.ts", "prettier.config.cjs", ".eslintrc.cjs", "src/main/**/*", "src/preload/**/*"],
-  "compilerOptions": {
-    "composite": true,
-    "types": ["electron-vite/node", "node"]
-  }
+	"extends": "./tsconfig.base.json",
+	"include": [
+		"electron.vite.config.ts",
+		"vitest.config.ts",
+		"prettier.config.cjs",
+		".eslintrc.cjs",
+		"src/main/**/*",
+		"src/preload/**/*",
+		"src/shared/**/*"
+	],
+	"compilerOptions": {
+		"composite": true,
+		"baseUrl": ".",
+		"types": ["electron-vite/node", "node"],
+		"paths": {
+			"@shared/*": ["./src/shared/*"]
+		}
+	}
 }

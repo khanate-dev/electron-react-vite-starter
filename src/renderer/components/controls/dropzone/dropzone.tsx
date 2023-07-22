@@ -1,6 +1,5 @@
 import { Box, Stack, alpha } from '@mui/material';
 import { useState } from 'react';
-
 import { csx } from '@renderer/helpers/style';
 
 import type { Mui } from '@renderer/types/mui';

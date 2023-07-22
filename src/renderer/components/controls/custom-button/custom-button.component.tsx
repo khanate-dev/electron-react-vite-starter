@@ -1,8 +1,7 @@
 import { Button, IconButton } from '@mui/material';
-
 import { CustomTooltip } from '@renderer/components/feedback/custom-tooltip';
 import { csx, getLoadingStyles } from '@renderer/helpers/style';
-import { excludeString } from '~/shared/helpers/type';
+import { excludeString } from '@shared/helpers/type';
 
 import type {
 	ButtonProps,
@@ -11,6 +10,7 @@ import type {
 } from '@mui/material';
 import type { Mui } from '@renderer/types/mui';
 import type { MouseEventHandler, ReactNode } from 'react';
+
 
 type ButtonBaseProps = Mui.propsWithSx<{
 	/** the icon for the button */
@@ -100,7 +100,7 @@ export type FullButtonProps = {
 	isEndIcon?: boolean;
 } & ButtonBaseProps;
 
-export type CustomButtonProps = IconButtonProps | FullButtonProps;
+export type CustomButtonProps = IconButtonProps;
 
 export const CustomButton = ({
 	sx,

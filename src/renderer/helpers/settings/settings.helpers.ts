@@ -1,6 +1,5 @@
 import { z } from 'zod';
-
-import { loggedInUserZodSchema } from '~/app/schemas/user';
+import { loggedInUserZodSchema } from '@renderer/schemas/user';
 
 export const schemas = {
 	user: loggedInUserZodSchema,

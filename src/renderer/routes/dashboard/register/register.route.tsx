@@ -1,18 +1,17 @@
 import { Paper, Typography } from '@mui/material';
 import { useState } from 'react';
 import { useLoaderData, useRevalidator } from 'react-router-dom';
-
-import { CustomButton } from '~/app/components/controls/custom-button';
-import { DetailTableDialog } from '~/app/components/dialogs/detail-table-dialog';
-import { SchemaForm } from '~/app/components/forms/schema-form';
-import { BackgroundImage } from '~/app/components/media/background-image';
-import { WiMetrixLogo } from '~/app/components/media/wimetrix-logo';
-import { addUser, getUsers } from '~/app/endpoints/user';
+import { CustomButton } from '@renderer/components/controls/custom-button';
+import { DetailTableDialog } from '@renderer/components/dialogs/detail-table-dialog';
+import { SchemaForm } from '@renderer/components/forms/schema-form';
+import { BackgroundImage } from '@renderer/components/media/background-image';
+import { WiMetrixLogo } from '@renderer/components/media/wimetrix-logo';
+import { addUser, getUsers } from '@renderer/endpoints/user';
 import {
 	userFormSchema,
 	userTypeDropdownOptions,
 	userViewSchema,
-} from '~/app/schemas/user';
+} from '@renderer/schemas/user';
 
 const loader = getUsers;
 

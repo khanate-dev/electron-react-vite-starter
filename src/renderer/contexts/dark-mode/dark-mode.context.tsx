@@ -1,7 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-
-import { events } from '~/app/helpers/events';
-import { getSetting, setSetting } from '~/app/helpers/settings';
+import { events } from '@renderer/helpers/events';
+import { getSetting, setSetting } from '@renderer/helpers/settings';
 
 import type { PropsWithChildren } from 'react';
 

@@ -3,7 +3,6 @@ import {
 	WbSunny as LightModeIcon,
 } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
-
 import { toggleDarkMode, useDarkMode } from '@renderer/contexts/dark-mode';
 import { csx } from '@renderer/helpers/style';
 

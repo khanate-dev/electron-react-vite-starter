@@ -1,5 +1,4 @@
 import { Box } from '@mui/material';
-
 import { csx } from '@renderer/helpers/style';
 
 import { getBackgroundImageStyles } from './background-image.styles';

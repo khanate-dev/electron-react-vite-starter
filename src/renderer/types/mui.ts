@@ -1,6 +1,6 @@
 import type { SxProps, Theme } from '@mui/material';
 import type { SystemStyleObject } from '@mui/system';
-import type { Utils } from '~/shared/types/utils';
+import type { Utils } from '@shared/types/utils';
 
 export declare namespace Mui {
 	type propsWithSx<T extends Record<string, unknown> = {}> = Utils.prettify<

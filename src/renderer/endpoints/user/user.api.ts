@@ -1,5 +1,4 @@
 import { z } from 'zod';
-
 import { apiEndpoint } from '@renderer/config';
 import {
 	deleteRequest,

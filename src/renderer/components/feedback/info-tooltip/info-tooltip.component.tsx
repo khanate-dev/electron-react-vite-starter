@@ -1,7 +1,6 @@
 import { InfoOutlined as InfoIcon } from '@mui/icons-material';
 import { ClickAwayListener, IconButton, Popper } from '@mui/material';
 import { useState } from 'react';
-
 import { CustomTooltip } from '@renderer/components/feedback/custom-tooltip';
 import { csx } from '@renderer/helpers/style';
 

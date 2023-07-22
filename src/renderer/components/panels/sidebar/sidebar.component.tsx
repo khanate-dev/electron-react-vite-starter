@@ -1,6 +1,5 @@
 import { Drawer, IconButton, List } from '@mui/material';
 import { useState } from 'react';
-
 import { CustomButton } from '@renderer/components/controls/custom-button';
 import { AppLogo } from '@renderer/components/media/app-logo';
 import { ToggleSidebarIcon } from '@renderer/components/media/icons';

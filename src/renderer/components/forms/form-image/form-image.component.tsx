@@ -1,6 +1,5 @@
 import { Stack } from '@mui/material';
 import { useState } from 'react';
-
 import { FileUploadButton } from '@renderer/components/controls/file-upload-button';
 import { CustomAvatar } from '@renderer/components/media/custom-avatar';
 import { IMAGE_EXTENSIONS } from '@renderer/config';

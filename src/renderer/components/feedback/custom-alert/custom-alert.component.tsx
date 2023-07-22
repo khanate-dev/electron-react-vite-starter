@@ -1,5 +1,4 @@
 import { Alert, alpha } from '@mui/material';
-
 import { csx } from '@renderer/helpers/style';
 
 import type { AlertProps } from '@mui/material';

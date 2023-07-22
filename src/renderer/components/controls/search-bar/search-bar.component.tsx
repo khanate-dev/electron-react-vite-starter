@@ -8,7 +8,6 @@ import {
 	lighten,
 } from '@mui/material';
 import { useEffect, useState } from 'react';
-
 import { csx, getOppositeColor } from '@renderer/helpers/style';
 
 import type { Mui } from '@renderer/types/mui';

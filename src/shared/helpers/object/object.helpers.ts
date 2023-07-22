@@ -1,4 +1,4 @@
-import type { Utils } from '~/shared/types/utils';
+import type { Utils } from '@shared/types/utils';
 
 export const objectEntries = <Keys extends PropertyKey, Type>(
 	object: Record<Keys, Type>,

@@ -1,15 +1,15 @@
 import { ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import { useState } from 'react';
-
 import { CustomTooltip } from '@renderer/components/feedback/custom-tooltip';
 import { AppIcon } from '@renderer/components/media/app-icon';
 import { AppLink } from '@renderer/components/navigation/app-link';
 import { csx } from '@renderer/helpers/style';
-import { formatToken, humanizeToken } from '~/shared/helpers/string';
+import { useState } from 'react';
+import { formatToken, humanizeToken } from '@shared/helpers/string';
 
 import { sidebarItemStyles as styles } from './sidebar-item.styles';
 
 import type { TSidebarItem } from '@renderer/components/panels/sidebar';
+
 
 export type SidebarItemProps = {
 	/** the current list item */

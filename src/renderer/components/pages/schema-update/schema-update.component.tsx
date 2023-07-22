@@ -1,8 +1,7 @@
-import { useNavigate, useParams } from 'react-router-dom';
-
 import { PageContainer } from '@renderer/components/containers/page-container';
 import { SchemaForm } from '@renderer/components/forms/schema-form';
-import { getParamId } from '~/shared/helpers/route';
+import { useNavigate, useParams } from 'react-router-dom';
+import { getParamId } from '@shared/helpers/route';
 
 import type { UpdateSchemaFormProps } from '@renderer/components/forms/schema-form';
 import type {
@@ -12,6 +11,7 @@ import type {
 } from '@renderer/schemas';
 import type { App } from '@renderer/types/app';
 import type { z } from 'zod';
+
 
 export type SchemaUpdateProps<
 	Zod extends z.ZodObject<Record<string, FormFieldZodType>, 'strict'>,

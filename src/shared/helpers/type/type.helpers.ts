@@ -1,10 +1,10 @@
-import { getCatchMessage } from '~/shared/errors';
-import { createBulkResponseSchema } from '~/shared/helpers/schema';
+import { getCatchMessage } from '@renderer/';
+import { createBulkResponseSchema } from '@shared/helpers/schema';
 
+import type { BulkResponse } from '@renderer/helpers/api';
+import type { DefaultBulkResponseObj } from '@shared/helpers/schema';
+import type { Utils } from '@shared/types/utils';
 import type { z } from 'zod';
-import type { BulkResponse } from '~/app/helpers/api';
-import type { DefaultBulkResponseObj } from '~/shared/helpers/schema';
-import type { Utils } from '~/shared/types/utils';
 
 export const readableTypeOf = (value: unknown) => {
 	if (typeof value !== 'object') return typeof value;

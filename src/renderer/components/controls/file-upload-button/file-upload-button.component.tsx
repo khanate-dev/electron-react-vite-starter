@@ -1,11 +1,11 @@
 import { DescriptionOutlined as UploadIcon } from '@mui/icons-material';
 import { Box, Button } from '@mui/material';
-
 import { getLoadingStyles } from '@renderer/helpers/style';
-import { excludeString } from '~/shared/helpers/type';
+import { excludeString } from '@shared/helpers/type';
 
 import type { ButtonProps } from '@mui/material';
 import type { ChangeEventHandler, InputHTMLAttributes } from 'react';
+
 
 export type FileUploadButtonProps = {
 	/** The props to pass to pass to the file input element */

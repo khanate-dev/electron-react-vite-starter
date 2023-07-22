@@ -6,16 +6,15 @@ import {
 	Typography,
 	alpha,
 } from '@mui/material';
-import { useEffect, useState } from 'react';
-
 import { CustomButton } from '@renderer/components/controls/custom-button';
 import { ThemeSwitch } from '@renderer/components/controls/theme-switch';
 import { AppLogo } from '@renderer/components/media/app-logo';
 import { BackgroundImage } from '@renderer/components/media/background-image';
 import { WiMetrixLogo } from '@renderer/components/media/wimetrix-logo';
 import { LOGIN_HEADER_HEIGHT } from '@renderer/config';
-import { getCatchMessage } from '~/shared/errors';
-import { dayjsUtc } from '~/shared/helpers/date';
+import { useEffect, useState } from 'react';
+import { getCatchMessage } from '@shared/errors';
+import { dayjsUtc } from '@shared/helpers/date';
 
 const headerLogoSx = {
 	width: 'auto',

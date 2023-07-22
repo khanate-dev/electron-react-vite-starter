@@ -2,14 +2,14 @@ import {
 	ToggleButton as MuiToggleButton,
 	ToggleButtonGroup,
 } from '@mui/material';
-
-import { humanizeToken } from '~/shared/helpers/string';
+import { humanizeToken } from '@shared/helpers/string';
 
 import type {
 	ToggleButtonProps as MuiToggleButtonProps,
 	ToggleButtonGroupProps,
 } from '@mui/material';
 import type { MouseEvent } from 'react';
+
 
 export type ToggleButtonObjectOption<Values extends string> =
 	MuiToggleButtonProps & {

@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material';
-
 import { GeneralDialog } from '@renderer/components/dialogs/general-dialog';
 import { useStatus } from '@renderer/hooks/status';
 

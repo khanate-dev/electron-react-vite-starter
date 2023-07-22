@@ -1,13 +1,13 @@
 import { BlurOn as NoIcon } from '@mui/icons-material';
 import { SvgIcon } from '@mui/material';
-
 import * as icons from '@renderer/components/media/icons';
-import { objectEntries } from '~/shared/helpers/object';
-import { formatToken } from '~/shared/helpers/string';
+import { objectEntries } from '@shared/helpers/object';
+import { formatToken } from '@shared/helpers/string';
 
 import type { SvgIconProps } from '@mui/material';
+import type { FormatToken } from '@shared/helpers/string';
 import type { SVGProps } from 'react';
-import type { FormatToken } from '~/shared/helpers/string';
+
 
 type IconType = (props: SVGProps<SVGSVGElement>) => JSX.Element;
 

@@ -16,14 +16,13 @@ import {
 	TableRow,
 	Typography,
 } from '@mui/material';
-
 import { CustomButton } from '@renderer/components/controls/custom-button';
 import { PAGINATION_SIZES } from '@renderer/config';
 import { csx } from '@renderer/helpers/style';
 import { useFiltering } from '@renderer/hooks/filtering';
 import { usePagination } from '@renderer/hooks/pagination';
 import { useSorting } from '@renderer/hooks/sorting';
-import { humanizeToken } from '~/shared/helpers/string';
+import { humanizeToken } from '@shared/helpers/string';
 
 import { generalTableStyles as styles } from './general-table.styles';
 import { generalTableCommonStyles } from './general-table.types';
@@ -33,6 +32,7 @@ import type {
 	GeneralTableProps,
 	GeneralTableStyles,
 } from './general-table.types';
+
 
 const SMALLEST_PAGINATION = Math.min(...PAGINATION_SIZES);
 

@@ -5,7 +5,7 @@ import {
 	numeric,
 	upperAlphabet,
 	wordSeparators,
-} from '~/shared/helpers/string';
+} from '@shared/helpers/string';
 
 import type {
 	Alphabet,
@@ -14,7 +14,8 @@ import type {
 	Numeric,
 	UpperAlphabet,
 	WordSeparators,
-} from '~/shared/helpers/string';
+} from '@shared/helpers/string';
+
 
 const formatStrategies = [
 	'camel',

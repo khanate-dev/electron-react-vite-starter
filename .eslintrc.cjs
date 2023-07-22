@@ -328,7 +328,7 @@ const config = {
 							{
 								name: 'electron',
 								importNames: ['ipcRenderer', 'ipcMain'],
-								message: 'Please import ipc helper from `~/shared/ipc-spec`.',
+								message: 'Please import ipc helper from `@shared/ipc-spec`.',
 							},
 						],
 					},

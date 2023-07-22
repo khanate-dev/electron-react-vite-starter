@@ -13,18 +13,18 @@ import {
 	Stack,
 	Typography,
 } from '@mui/material';
-import { useState } from 'react';
-
 import { Dropzone } from '@renderer/components/controls/dropzone';
 import { SearchBar } from '@renderer/components/controls/search-bar';
 import { csx } from '@renderer/helpers/style';
 import { usePagination } from '@renderer/hooks/pagination';
-import { humanizeToken } from '~/shared/helpers/string';
+import { useState } from 'react';
+import { humanizeToken } from '@shared/helpers/string';
 
 import { getOptionPanelStyles } from './option-panel.styles';
 
 import type { Mui } from '@renderer/types/mui';
 import type { ReactNode } from 'react';
+
 
 export type OptionPanelProps<Type extends Obj> = Mui.propsWithSx<{
 	/** the list of items to show */

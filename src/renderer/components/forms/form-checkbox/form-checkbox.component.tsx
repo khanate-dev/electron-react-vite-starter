@@ -1,5 +1,4 @@
 import { Checkbox, FormControlLabel, alpha } from '@mui/material';
-
 import { csx, getOppositeColor } from '@renderer/helpers/style';
 
 import type { CheckboxProps } from '@mui/material';

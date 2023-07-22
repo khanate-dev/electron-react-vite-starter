@@ -1,5 +1,4 @@
 import { useLoaderData } from 'react-router-dom';
-
 import { SchemaView } from '@renderer/components/pages/schema-view';
 import { deleteUser, getUsers } from '@renderer/endpoints/user';
 import { userViewSchema as schema } from '@renderer/schemas/user';

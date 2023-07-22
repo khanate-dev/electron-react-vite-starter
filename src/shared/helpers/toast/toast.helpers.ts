@@ -1,6 +1,5 @@
 import { toast } from 'react-hot-toast';
-
-import { getCatchMessage } from '~/shared/errors';
+import { getCatchMessage } from '@shared/errors';
 
 export const addToast = (
 	message: unknown,

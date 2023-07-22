@@ -6,7 +6,6 @@ import {
 	DialogTitle,
 	Typography,
 } from '@mui/material';
-
 import { CustomButton } from '@renderer/components/controls/custom-button';
 import { csx } from '@renderer/helpers/style';
 

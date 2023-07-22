@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-
 import { PageContainer } from '@renderer/components/containers/page-container';
 import { SchemaForm } from '@renderer/components/forms/schema-form';
 

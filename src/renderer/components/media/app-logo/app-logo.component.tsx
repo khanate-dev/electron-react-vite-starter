@@ -1,5 +1,4 @@
 import { Box } from '@mui/material';
-
 import { csx } from '@renderer/helpers/style';
 
 import { getAppLogoStyles } from './app-logo.styles';

@@ -1,6 +1,6 @@
 {
 	"extends": "./tsconfig.base.json",
-	"include": ["src/renderer/**/*", "src/preload/*.d.ts"],
+	"include": ["src/renderer/**/*", "src/preload/*.d.ts", "src/shared/**/*"],
 	"compilerOptions": {
 		"composite": true,
 		"jsx": "react-jsx",
@@ -8,7 +8,8 @@
 		"types": ["react", "react-dom"],
 		"lib": ["esnext", "dom", "dom.iterable"],
 		"paths": {
-			"@renderer/*": ["./src/renderer/*"]
+			"@renderer/*": ["./src/renderer/*"],
+			"@shared/*": ["./src/shared/*"]
 		}
 	}
 }

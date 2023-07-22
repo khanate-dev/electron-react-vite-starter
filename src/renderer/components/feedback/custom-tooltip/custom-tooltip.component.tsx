@@ -1,5 +1,4 @@
 import { Tooltip } from '@mui/material';
-
 import { csx } from '@renderer/helpers/style';
 
 import type { TooltipProps } from '@mui/material';

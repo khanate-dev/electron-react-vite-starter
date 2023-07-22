@@ -1,13 +1,13 @@
 import { isDayjs } from 'dayjs';
 import { isValidElement } from 'react';
 import { z } from 'zod';
+import { dayjsFormatPatterns, dayjsUtc } from '@shared/helpers/date';
+import { omit } from '@shared/helpers/object';
 
-import { dayjsFormatPatterns, dayjsUtc } from '~/shared/helpers/date';
-import { omit } from '~/shared/helpers/object';
+import type { GeneralTableColumn } from '@renderer/components/tables/general-table';
+import type { BulkResponse } from '@renderer/helpers/api';
+import type { App } from '@renderer/types/app';
 
-import type { GeneralTableColumn } from '~/app/components/tables/general-table';
-import type { BulkResponse } from '~/app/helpers/api';
-import type { App } from '~/app/types/app';
 
 export const dbIdSchema = z.number().int().positive().finite().brand('DbKey');
 

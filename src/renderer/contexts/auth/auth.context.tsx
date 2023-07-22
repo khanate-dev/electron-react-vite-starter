@@ -1,11 +1,10 @@
 import { createContext, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { events } from '@renderer/helpers/events';
+import { removeSetting } from '@renderer/helpers/settings';
 
-import { events } from '~/app/helpers/events';
-import { removeSetting } from '~/app/helpers/settings';
-
+import type { LoggedInUser } from '@renderer/schemas/user';
 import type { ReactNode } from 'react';
-import type { LoggedInUser } from '~/app/schemas/user';
 
 const AuthContext = createContext<null | LoggedInUser>(null);
 
@@ -41,7 +40,7 @@ export const logout = () => {
 
 export const useUser = (): LoggedInUser => {
 	const user = useContext(AuthContext);
-	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	 
 	if (user === undefined)
 		throw new Error('useUser must be used within a UserProvider');
 

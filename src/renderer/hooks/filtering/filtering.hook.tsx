@@ -1,10 +1,10 @@
 import { Box, Grid as Stack } from '@mui/material';
-import { useState } from 'react';
-
 import { SearchBar } from '@renderer/components/controls/search-bar';
-import { objectValues } from '~/shared/helpers/object';
+import { useState } from 'react';
+import { objectValues } from '@shared/helpers/object';
 
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
+
 
 type FilterResponse<Type extends Obj> = {
 	searchString: string;

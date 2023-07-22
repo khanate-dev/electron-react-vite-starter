@@ -4,14 +4,13 @@ import {
 	Visibility as ViewIcon,
 } from '@mui/icons-material';
 import { Checkbox, Stack } from '@mui/material';
-import { isDayjs } from 'dayjs';
-
 import { FieldActions } from '@renderer/components/app/field-actions';
 import { CustomAvatar } from '@renderer/components/media/custom-avatar';
 import { GeneralTable } from '@renderer/components/tables/general-table';
 import { useUser } from '@renderer/contexts/auth';
 import { getImageUrl } from '@renderer/helpers/image';
-import { dayjsFormatPatterns } from '~/shared/helpers/date';
+import { isDayjs } from 'dayjs';
+import { dayjsFormatPatterns } from '@shared/helpers/date';
 
 import type {
 	GeneralTableAction,
@@ -21,6 +20,7 @@ import type { ViewSchema, ViewSchemaField } from '@renderer/schemas';
 import type { ReactNode } from 'react';
 import type { AnyZodObject, z } from 'zod';
 import type { ViewTableProps } from './view-table.types';
+
 
 export const ViewTable = <
 	Zod extends AnyZodObject,

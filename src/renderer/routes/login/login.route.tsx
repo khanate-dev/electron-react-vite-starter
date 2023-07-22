@@ -7,17 +7,16 @@ import {
 	alpha,
 } from '@mui/material';
 import { redirect, useNavigate } from 'react-router-dom';
-
-import { ThemeSwitch } from '~/app/components/controls/theme-switch';
-import { SchemaForm } from '~/app/components/forms/schema-form';
-import { AppLogo } from '~/app/components/media/app-logo';
-import { BackgroundImage } from '~/app/components/media/background-image';
-import { WiMetrixLogo } from '~/app/components/media/wimetrix-logo';
-import { LOGIN_HEADER_HEIGHT } from '~/app/config';
-import { login } from '~/app/endpoints/user';
-import { getSetting, setSetting } from '~/app/helpers/settings';
-import { FormSchema } from '~/app/schemas';
-import { userZodSchema } from '~/app/schemas/user';
+import { ThemeSwitch } from '@renderer/components/controls/theme-switch';
+import { SchemaForm } from '@renderer/components/forms/schema-form';
+import { AppLogo } from '@renderer/components/media/app-logo';
+import { BackgroundImage } from '@renderer/components/media/background-image';
+import { WiMetrixLogo } from '@renderer/components/media/wimetrix-logo';
+import { LOGIN_HEADER_HEIGHT } from '@renderer/config';
+import { login } from '@renderer/endpoints/user';
+import { getSetting, setSetting } from '@renderer/helpers/settings';
+import { FormSchema } from '@renderer/schemas';
+import { userZodSchema } from '@renderer/schemas/user';
 
 const loginSchema = new FormSchema({
 	name: 'login',

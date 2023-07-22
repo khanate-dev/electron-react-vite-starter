@@ -1,7 +1,6 @@
 import { Box, Stack } from '@mui/material';
 import { isDayjs } from 'dayjs';
 import { useReducer, useState } from 'react';
-
 import { CustomButton } from '@renderer/components/controls/custom-button';
 import { FormField } from '@renderer/components/forms/form-field';
 import { FormImage } from '@renderer/components/forms/form-image';
@@ -150,7 +149,7 @@ export type SchemaFormProps<
 	},
 > =
 	| UpdateSchemaFormProps<Zod, Keys, WorkingObj, Fields>
-	| AddSchemaFormProps<Zod, Keys, WorkingObj, Fields>;
+	 ;
 
 type FormAction<WorkingObj extends Obj> =
 	| { type: 'reset' }

@@ -1,12 +1,11 @@
-import { z } from 'zod';
-
 import { USER_TYPES } from '@renderer/config';
 import { FormSchema, ViewSchema } from '@renderer/schemas';
 import {
 	createZodDbSchema,
 	dbIdSchema,
 	imageUpdatedAtSchema,
-} from '~/shared/helpers/schema';
+} from '@shared/helpers/schema';
+import { z } from 'zod';
 
 import type { App } from '@renderer/types/app';
 

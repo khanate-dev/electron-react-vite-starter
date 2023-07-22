@@ -1,10 +1,9 @@
-import { useReducer } from 'react';
-import { z } from 'zod';
-
 import { CustomAlert } from '@renderer/components/feedback/custom-alert';
 import { csx } from '@renderer/helpers/style';
-import { getCatchMessage } from '~/shared/errors';
-import { createGroupedOptionalSchema } from '~/shared/helpers/schema';
+import { useReducer } from 'react';
+import { z } from 'zod';
+import { getCatchMessage } from '@shared/errors';
+import { createGroupedOptionalSchema } from '@shared/helpers/schema';
 
 import type { Mui } from '@renderer/types/mui';
 

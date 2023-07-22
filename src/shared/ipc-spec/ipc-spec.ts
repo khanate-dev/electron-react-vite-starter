@@ -4,8 +4,8 @@ import {
 	ipcRenderer as electronIpcRenderer,
 } from 'electron';
 
+import type { Utils } from '@shared/types/utils';
 import type { App, BrowserWindow } from 'electron';
-import type { Utils } from '~/shared/types/utils';
 
 export type IpcApi = {
 	app: Pick<App, 'exit'> & {

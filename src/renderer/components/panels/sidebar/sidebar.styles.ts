@@ -1,5 +1,4 @@
 import { keyframes } from '@mui/material';
-
 import {
 	APP_HEADER_HEIGHT,
 	DRAWER_MINIMIZED_WIDTH,

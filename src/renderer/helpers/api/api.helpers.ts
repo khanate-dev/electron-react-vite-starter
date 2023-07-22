@@ -1,18 +1,18 @@
+import { disableAuth, isFetchMocked } from '@renderer/config';
+import { logout } from '@renderer/contexts/auth';
+import { getSetting } from '@renderer/helpers/settings';
 import { z } from 'zod';
-
-import { disableAuth, isFetchMocked } from '~/app/config';
-import { logout } from '~/app/contexts/auth';
-import { getSetting } from '~/app/helpers/settings';
 import {
 	ApiError,
 	AuthError,
 	ConnectionError,
 	getCatchMessage,
-} from '~/shared/errors';
-import { dbDataSorter } from '~/shared/helpers/schema';
+} from '@shared/errors';
+import { dbDataSorter } from '@shared/helpers/schema';
 
-import type { timestampSchema } from '~/shared/helpers/schema';
-import type { Utils } from '~/shared/types/utils';
+import type { timestampSchema } from '@shared/helpers/schema';
+import type { Utils } from '@shared/types/utils';
+
 
 const responseSchema = z.strictObject({
 	errorCode: z.string(),

@@ -1,17 +1,16 @@
+import { getCatchMessage } from '@shared/errors';
+import { humanizeToken } from '@shared/helpers/string';
 import { z } from 'zod';
 
-import { getCatchMessage } from '~/shared/errors';
-import { humanizeToken } from '~/shared/helpers/string';
-
 import type { App } from '@renderer/types/app';
-import type { InputHTMLAttributes, ReactNode } from 'react';
 import type {
 	ZodDatetime,
 	ZodDbId,
 	ZodNumberSelection,
 	ZodStringSelection,
-} from '~/shared/helpers/schema';
-import type { Utils } from '~/shared/types/utils';
+} from '@shared/helpers/schema';
+import type { Utils } from '@shared/types/utils';
+import type { InputHTMLAttributes, ReactNode } from 'react';
 
 export type FormSchemaLists<
 	Zod extends z.ZodObject<Record<string, FormFieldZodType>, 'strict'>,
@@ -75,7 +74,6 @@ export type FormFieldZodType =
 	| SelectionType
 	| StringType
 	| NumberType
-	| DateType
 	| BooleanType
 	| z.AnyZodObject;
 
@@ -348,9 +346,7 @@ export class FormSchema<
 					const fz = schema.zod.shape[key] as unknown as Zod['shape'][Keys];
 					const zod = transformSchema(fz);
 					zodObject[key] = zod as Zod['shape'][Keys];
-					defaultZodObject[key] = transformSchema(fz, true) as z.ZodCatch<
-						Zod['shape'][Keys]
-					>;
+					defaultZodObject[key] = transformSchema(fz, true);
 
 					obj[key] = {
 						...field,

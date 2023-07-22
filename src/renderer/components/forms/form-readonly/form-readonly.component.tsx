@@ -1,5 +1,4 @@
 import { Box, Stack, alpha } from '@mui/material';
-
 import { CustomTooltip } from '@renderer/components/feedback/custom-tooltip';
 import { csx, getOppositeColor } from '@renderer/helpers/style';
 

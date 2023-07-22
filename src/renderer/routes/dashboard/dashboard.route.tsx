@@ -1,6 +1,5 @@
 import { AppBar, Box, Stack, Toolbar } from '@mui/material';
 import { Outlet, redirect, useLoaderData } from 'react-router-dom';
-
 import { UserProfile } from '@renderer/components/app/user-profile';
 import { ThemeSwitch } from '@renderer/components/controls/theme-switch';
 import { WiMetrixLogo } from '@renderer/components/media/wimetrix-logo';

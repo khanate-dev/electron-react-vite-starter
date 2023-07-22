@@ -1,6 +1,5 @@
 import { Stack } from '@mui/material';
 import { isDayjs } from 'dayjs';
-
 import { FieldActions } from '@renderer/components/app/field-actions';
 import { FormCheckbox } from '@renderer/components/forms/form-checkbox';
 import { FormDropdown } from '@renderer/components/forms/form-dropdown';
@@ -179,7 +178,7 @@ export const FormField = <
 					suggestions={
 						(field.type === 'int' ||
 							field.type === 'string' ||
-							// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+							 
 							field.type === 'float') &&
 						field.hasSuggestions
 							? (passedOptions as never)

@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-
-import { renderWithProviders } from '~/shared/helpers/test';
+import { renderWithProviders } from '@shared/helpers/test';
 
 import { Login } from './login.route';
+
 
 type SetupParams = {
 	username?: string;

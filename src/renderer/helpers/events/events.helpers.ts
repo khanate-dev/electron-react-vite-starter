@@ -1,4 +1,4 @@
-import type { LoggedInUser } from '~/app/schemas/user';
+import type { LoggedInUser } from '@renderer/schemas/user';
 
 export type EventMap = {
 	simple: ['logout', 'toggleDarkMode'];

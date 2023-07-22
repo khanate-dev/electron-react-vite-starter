@@ -1,7 +1,7 @@
-import { IMAGE_EXTENSIONS, apiEndpoint } from '~/app/config';
+import { IMAGE_EXTENSIONS, apiEndpoint } from '@renderer/config';
 
+import type { Utils } from '@shared/types/utils';
 import type { Dayjs } from 'dayjs';
-import type { Utils } from '~/shared/types/utils';
 
 /**
  * a function that throws an error if the given value is not a valid image

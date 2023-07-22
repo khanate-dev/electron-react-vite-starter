@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { DEFAULT_PAGE_SIZE } from '@renderer/config';
 
 import type { PAGINATION_SIZES } from '@renderer/config';

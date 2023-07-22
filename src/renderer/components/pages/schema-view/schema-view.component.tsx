@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate, useNavigation, useRevalidator } from 'react-router-dom';
-
 import { PageContainer } from '@renderer/components/containers/page-container';
 import { DeleteDialog } from '@renderer/components/dialogs/delete-dialog';
 import { ViewTable } from '@renderer/components/tables/view-table';

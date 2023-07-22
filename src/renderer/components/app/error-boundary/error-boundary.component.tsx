@@ -12,8 +12,7 @@ import {
 	useNavigate,
 	useRouteError,
 } from 'react-router-dom';
-
-import { AuthError } from '~/shared/errors';
+import { AuthError } from '@shared/errors';
 
 export const ErrorBoundary = () => {
 	const navigate = useNavigate();

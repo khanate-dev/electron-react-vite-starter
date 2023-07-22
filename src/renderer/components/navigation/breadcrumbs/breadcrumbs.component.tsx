@@ -1,14 +1,14 @@
 import { HomeRounded } from '@mui/icons-material';
 import { Box, Breadcrumbs as MuiBreadcrumbs, Typography } from '@mui/material';
-import { NavLink, useLocation } from 'react-router-dom';
-
 import { AppIcon } from '@renderer/components/media/app-icon';
-import { humanizeToken } from '~/shared/helpers/string';
+import { NavLink, useLocation } from 'react-router-dom';
+import { humanizeToken } from '@shared/helpers/string';
 
 import { breadcrumbsStyles as styles } from './breadcrumbs.styles';
 
 import type { Mui } from '@renderer/types/mui';
 import type { ReactNode } from 'react';
+
 
 type BaseCrumbProps = {
 	to?: string;

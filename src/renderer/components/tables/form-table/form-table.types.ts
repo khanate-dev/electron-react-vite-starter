@@ -16,8 +16,8 @@ import type {
 } from '@renderer/schemas';
 import type { App } from '@renderer/types/app';
 import type { Mui } from '@renderer/types/mui';
+import type { Utils } from '@shared/types/utils';
 import type { z } from 'zod';
-import type { Utils } from '~/shared/types/utils';
 
 export type FormTableFormStyles = Partial<
 	Record<

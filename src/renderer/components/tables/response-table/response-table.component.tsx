@@ -3,12 +3,11 @@ import {
 	TaskAltRounded as SuccessIcon,
 } from '@mui/icons-material';
 import { Box, Stack, Typography } from '@mui/material';
-
 import { CustomAlert } from '@renderer/components/feedback/custom-alert';
 import { InfoTooltip } from '@renderer/components/feedback/info-tooltip';
 import { GeneralTable } from '@renderer/components/tables/general-table';
-import { schemaToGeneralTableColumns } from '~/shared/helpers/schema';
-import { pluralize } from '~/shared/helpers/string';
+import { schemaToGeneralTableColumns } from '@shared/helpers/schema';
+import { pluralize } from '@shared/helpers/string';
 
 import type { BulkResponse } from '@renderer/helpers/api';
 import type {
@@ -19,6 +18,7 @@ import type {
 import type { App } from '@renderer/types/app';
 import type { Mui } from '@renderer/types/mui';
 import type { z } from 'zod';
+
 
 const alertStyle = {
 	gap: 0.5,

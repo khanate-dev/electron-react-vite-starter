@@ -10,10 +10,9 @@ import {
 	Stepper,
 	keyframes,
 } from '@mui/material';
-
 import { CustomButton } from '@renderer/components/controls/custom-button';
 
-import type { Utils } from '~/shared/types/utils';
+import type { Utils } from '@shared/types/utils';
 
 const showForm = keyframes({
 	from: {

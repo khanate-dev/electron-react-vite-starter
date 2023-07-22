@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-import { compareDate, isDate } from '~/shared/helpers/date';
+import { compareDate, isDate } from '@shared/helpers/date';
 
 export type Sorting<T extends PropertyKey> = {
 	column: T | null;

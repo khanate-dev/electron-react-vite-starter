@@ -3,7 +3,7 @@ import {
 	lowerAlphabet,
 	upperAlphabet,
 	wordSeparators,
-} from '~/shared/helpers/string';
+} from '@shared/helpers/string';
 
 export const humanizeCases = ['lower', 'sentence', 'title', 'upper'] as const;
 
