@@ -1,6 +1,7 @@
 import { keyframes } from '@mui/material';
+import { pageTransitionStyles } from '@renderer/helpers/style';
 
-import { pageTransitionStyles } from '~/app/helpers/style';
+import type { Mui } from '@renderer/types/mui';
 
 const showLogo = keyframes({
 	'0%': {
@@ -100,4 +101,4 @@ export const emptyPageStyles = {
 			},
 		},
 	},
-} satisfies Mui.SxStyleObj;
+} satisfies Mui.sxStyleObj;

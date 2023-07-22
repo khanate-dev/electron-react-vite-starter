@@ -1,9 +1,10 @@
 import { app, shell, BrowserWindow } from 'electron';
 import { join } from 'path';
 
+import { watchWindowShortcuts } from './helpers/shortcuts';
+
 import icon from '../../resources/icon.png?asset';
 
-import { watchWindowShortcuts } from './helpers/shortcuts';
 
 const createWindow = () => {
 	// Create the browser window.

@@ -1,4 +1,8 @@
 import {
+	ArrowBack as BackIcon,
+	ArrowForward as ForwardIcon,
+} from '@mui/icons-material';
+import {
 	Divider,
 	Stack,
 	Step,
@@ -6,12 +10,8 @@ import {
 	Stepper,
 	keyframes,
 } from '@mui/material';
-import {
-	ArrowBack as BackIcon,
-	ArrowForward as ForwardIcon,
-} from '@mui/icons-material';
 
-import { CustomButton } from '~/app/components/controls/custom-button';
+import { CustomButton } from '@renderer/components/controls/custom-button';
 
 import type { Utils } from '~/shared/types/utils';
 
@@ -24,7 +24,7 @@ const showForm = keyframes({
 
 export type SteppedFormProps<
 	Steps extends Readonly<string[]>,
-	Children = Utils.repeatedTuple<JSX.Element, Steps['length']>
+	Children = Utils.tuple<Steps['length'], JSX.Element>,
 > = {
 	children: Children;
 

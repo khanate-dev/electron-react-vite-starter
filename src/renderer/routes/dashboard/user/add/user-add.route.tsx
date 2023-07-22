@@ -1,9 +1,9 @@
+import { SchemaAdd } from '@renderer/components/pages/schema-add';
+import { addUser } from '@renderer/endpoints/user';
 import {
 	userFormSchema as schema,
 	userTypeDropdownOptions,
-} from '~/app/schemas/user';
-import { addUser } from '~/app/endpoints/user';
-import { SchemaAdd } from '~/app/components/pages/schema-add';
+} from '@renderer/schemas/user';
 
 export const UserAdd = () => {
 	return (

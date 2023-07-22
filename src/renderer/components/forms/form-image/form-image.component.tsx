@@ -1,10 +1,10 @@
-import { useState } from 'react';
 import { Stack } from '@mui/material';
+import { useState } from 'react';
 
-import { IMAGE_EXTENSIONS } from '~/app/config';
-import { assertValidImage } from '~/app/helpers/image';
-import { CustomAvatar } from '~/app/components/media/custom-avatar';
-import { FileUploadButton } from '~/app/components/controls/file-upload-button';
+import { FileUploadButton } from '@renderer/components/controls/file-upload-button';
+import { CustomAvatar } from '@renderer/components/media/custom-avatar';
+import { IMAGE_EXTENSIONS } from '@renderer/config';
+import { assertValidImage } from '@renderer/helpers/image';
 
 export type FormImageProps = {
 	/** the width and height of the image, in pixels */

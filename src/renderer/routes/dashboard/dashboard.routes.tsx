@@ -1,8 +1,8 @@
 import { Register } from './register';
 import { userRoutes } from './user';
 
+import type { UserType } from '@renderer/schemas/user';
 import type { NonIndexRouteObject } from 'react-router-dom';
-import type { UserType } from '~/app/schemas/user';
 
 type DashboardRoute = {
 	/** the route path  */

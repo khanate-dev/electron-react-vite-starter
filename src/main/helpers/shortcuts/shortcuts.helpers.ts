@@ -1,4 +1,6 @@
-import { BrowserWindow, app } from 'electron'
+import { app } from 'electron'
+
+import type { BrowserWindow} from 'electron';
 
 export type ShortcutOptions = {
   /** Use `ESC` key to close window, default `false`. */
@@ -27,16 +29,16 @@ export const watchWindowShortcuts = (
     if (input.type !== 'keyDown') return
     const isCommandOrControl = input.control || input.meta
 
-    if (!app.isPackaged && input.key === 'r' && isCommandOrControl) {
+    if (!app.isPackaged && input.key === 'r' && isCommandOrControl) 
       event.preventDefault()
-    }
+    
 
     if (!app.isPackaged && input.code === 'F12') {
-      if (webContents.isDevToolsOpened()) {
+      if (webContents.isDevToolsOpened()) 
         webContents.closeDevTools()
-      } else {
+       else 
         webContents.openDevTools({ mode: 'undocked' })
-      }
+      
     }
 
     if (escToQuit && input.code === 'Escape' && input.key !== 'Process') {

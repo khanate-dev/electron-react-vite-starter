@@ -1,15 +1,15 @@
 import { useState } from 'react';
 
-import { DEFAULT_PAGE_SIZE } from '~/app/config';
+import { DEFAULT_PAGE_SIZE } from '@renderer/config';
 
-import type { PAGINATION_SIZES } from '~/app/config';
+import type { PAGINATION_SIZES } from '@renderer/config';
 
 type Size = (typeof PAGINATION_SIZES)[number];
 
 export const usePagination = <Type extends any>(
 	data: Type[],
 	isDisabled?: boolean,
-	isZeroBased?: boolean
+	isZeroBased?: boolean,
 ) => {
 	const firstPage = isZeroBased ? 0 : 1;
 

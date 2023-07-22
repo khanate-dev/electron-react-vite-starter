@@ -1,27 +1,28 @@
-import { useNavigate } from 'react-router-dom';
-import { Paper, Stack, Typography } from '@mui/material';
 import {
-	BackupRounded as ImportIcon,
-	VisibilityRounded as ViewIcon,
-	PlayForWorkRounded as AssignIcon,
-	PlaylistAddRounded as AddIcon,
-	PrintRounded as PrintIcon,
-	TrackChangesRounded as FormIcon,
-	EditRounded as UpdateIcon,
-	SyncRounded as SyncIcon,
 	DoneAll as ActivateIcon,
+	PlaylistAddRounded as AddIcon,
+	PlayForWorkRounded as AssignIcon,
 	ArrowBackRounded as BackIcon,
+	TrackChangesRounded as FormIcon,
+	BackupRounded as ImportIcon,
 	LocalShippingRounded as PostIcon,
+	PrintRounded as PrintIcon,
+	SyncRounded as SyncIcon,
+	EditRounded as UpdateIcon,
+	VisibilityRounded as ViewIcon,
 } from '@mui/icons-material';
-
-import { csx } from '~/app/helpers/style';
-import { CustomButton } from '~/app/components/controls/custom-button';
-import { useUser } from '~/app/contexts/user';
+import { Paper, Stack, Typography } from '@mui/material';
+import { CustomButton } from '@renderer/components/controls/custom-button';
+import { useUser } from '@renderer/contexts/auth';
+import { csx } from '@renderer/helpers/style';
+import { useNavigate } from 'react-router-dom';
 
 import { pageContainerStyles as styles } from './page-container.styles';
 
-import type { UserType } from '~/app/schemas/user';
-import type { FullButtonProps } from '~/app/components/controls/custom-button';
+import type { FullButtonProps } from '@renderer/components/controls/custom-button';
+import type { UserType } from '@renderer/schemas/user';
+import type { Mui } from '@renderer/types/mui';
+import type { ReactNode } from 'react';
 
 const navigationPages = [
 	'import',
@@ -47,11 +48,8 @@ type Navigation = {
 	availableTo: UserType[];
 } & Omit<FullButtonProps, 'label'>;
 
-export type PageContainerProps = {
-	children: React.Node;
-
-	/** the styles to apply to the body container */
-	sx?: Mui.SxStyle;
+export type PageContainerProps = Mui.propsWithSx<{
+	children: ReactNode;
 
 	/** the title of the page */
 	title: string;
@@ -61,7 +59,7 @@ export type PageContainerProps = {
 
 	/** the page controls to render at the top */
 	controls?: JSX.Element | JSX.Element[] | null;
-};
+}>;
 
 const icons: Record<NavigationPage, JSX.Element> = {
 	import: <ImportIcon />,
@@ -164,7 +162,7 @@ export const PageContainer = ({
 							label={label ?? id}
 							icon={icons[id]}
 							onClick={() => {
-								return id === 'back' ? navigate(-1) : navigate(id);
+								id === 'back' ? navigate(-1) : navigate(id);
 							}}
 						/>
 					);

@@ -1,7 +1,7 @@
-import { csx } from '~/app/helpers/style';
-import { GeneralDialog } from '~/app/components/dialogs/general-dialog';
+import { GeneralDialog } from '@renderer/components/dialogs/general-dialog';
+import { csx } from '@renderer/helpers/style';
 
-import type { GeneralDialogProps } from '~/app/components/dialogs/general-dialog';
+import type { GeneralDialogProps } from '@renderer/components/dialogs/general-dialog';
 
 type ErrorDialogBaseProps = {
 	children?: GeneralDialogProps['children'];
@@ -54,7 +54,7 @@ export const ErrorDialog = ({
 						fontSize: 'inherit',
 					},
 				},
-				passedStyles?.content
+				passedStyles?.content,
 			),
 			...passedStyles,
 		}}

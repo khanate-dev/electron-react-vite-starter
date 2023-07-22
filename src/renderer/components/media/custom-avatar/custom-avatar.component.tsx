@@ -1,6 +1,6 @@
 import { Avatar } from '@mui/material';
 
-import { csx, getOppositeColor } from '~/app/helpers/style';
+import { csx, getOppositeColor } from '@renderer/helpers/style';
 
 import type { AvatarProps } from '@mui/material';
 
@@ -33,10 +33,10 @@ export const CustomAvatar = ({
 					fontWeight: 'bold',
 					fontSize: '1.5rem',
 				},
-				sx
+				sx,
 			)}
 		>
-			{showFallback && avatarProps.alt?.[0] && avatarProps.alt[0].toUpperCase()}
+			{showFallback && avatarProps.alt?.[0]?.toUpperCase()}
 		</Avatar>
 	);
 };

@@ -1,4 +1,4 @@
-// import { backendApiEndpoint } from '~/app/config';
+// import { backendApiEndpoint } from '@renderer/config';
 // import { rest, RestContext } from 'msw';
 // import { User } from 'types/general';
 // import { users } from './seed-data';

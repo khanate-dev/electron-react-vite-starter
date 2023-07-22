@@ -1,19 +1,21 @@
 import { Box } from '@mui/material';
-
-import { BackgroundImage } from '~/app/components/media/background-image';
-import { csx } from '~/app/helpers/style';
+import { BackgroundImage } from '@renderer/components/media/background-image';
+import { csx } from '@renderer/helpers/style';
 
 import { emptyPageStyles as styles } from './empty-page.styles';
 
+import type { Mui } from '@renderer/types/mui';
+import type { ReactNode } from 'react';
+
 export type EmptyPageProps = {
 	/** the styles to apply to the center box */
-	boxSx?: Mui.SxProp;
+	boxSx?: Mui.sxProp;
 
 	/** the opacity of the background image */
 	backgroundOpacity?: number;
 
 	/** the contents of the center box */
-	children: React.Node;
+	children: ReactNode;
 };
 
 export const EmptyPage = ({

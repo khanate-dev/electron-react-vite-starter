@@ -19,7 +19,7 @@
 		"noUnusedParameters": false,
 
 		// modules
-		"module": "esnext",
+		"module": "ESNext",
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"types": ["vitest/globals"],
@@ -49,5 +49,5 @@
 
 		// completeness
 		"skipLibCheck": true
-	},
+	}
 }

@@ -1,31 +1,32 @@
-import { useState } from 'react';
-import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 import { ExpandMoreRounded as ExpandIcon } from '@mui/icons-material';
-
-import { csx } from '~/app/helpers/style';
-import { CustomButton } from '~/app/components/controls/custom-button';
+import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
+import { CustomButton } from '@renderer/components/controls/custom-button';
+import { csx } from '@renderer/helpers/style';
+import { useState } from 'react';
 
 import type { AccordionProps } from '@mui/material';
-import type { FullButtonProps } from '~/app/components/controls/custom-button';
+import type { FullButtonProps } from '@renderer/components/controls/custom-button';
+import type { Mui } from '@renderer/types/mui';
+import type { ReactNode } from 'react';
 
 export type SimpleAccordionProps = {
 	/** the title to show in the accordion summary */
-	title: React.Node;
+	title: ReactNode;
 
 	/** the subtitle to show in the accordion summary */
-	subtitle?: React.Node;
+	subtitle?: ReactNode;
 
 	/** the actions to show on the accordion header */
 	actions?: FullButtonProps[];
 
 	/** the contents to render in the accordion details */
-	children: React.Node;
+	children: ReactNode;
 
 	/** the styles to apply to the accordion children */
 	styles?: {
-		accordion?: Mui.SxStyle;
-		summary?: Mui.SxStyle;
-		details?: Mui.SxStyle;
+		accordion?: Mui.sxStyle;
+		summary?: Mui.sxStyle;
+		details?: Mui.sxStyle;
 	};
 } & Pick<
 	AccordionProps,
@@ -49,7 +50,7 @@ export const SimpleAccordion = ({
 	...accordionProps
 }: SimpleAccordionProps) => {
 	const [localExpanded, setLocalExpanded] = useState(
-		passedExpanded ?? accordionProps.defaultExpanded ?? false
+		passedExpanded ?? accordionProps.defaultExpanded ?? false,
 	);
 
 	const expanded = passedExpanded ?? localExpanded;
@@ -76,7 +77,7 @@ export const SimpleAccordion = ({
 					},
 				},
 				passedStyles?.accordion,
-				accordionProps.sx
+				accordionProps.sx,
 			)}
 		>
 			<AccordionSummary
@@ -95,11 +96,11 @@ export const SimpleAccordion = ({
 							},
 						},
 					},
-					passedStyles?.summary
+					passedStyles?.summary,
 				)}
-				onClick={(event) =>
-					onChange?.(event, expanded) ?? setLocalExpanded((prev) => !prev)
-				}
+				onClick={(event) => {
+					onChange?.(event, expanded) ?? setLocalExpanded((prev) => !prev);
+				}}
 			>
 				{title}
 				{subtitle}

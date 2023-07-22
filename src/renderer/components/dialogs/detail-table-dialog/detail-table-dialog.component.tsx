@@ -1,10 +1,10 @@
-import { ViewTable } from '~/app/components/tables/view-table';
-import { GeneralDialog } from '~/app/components/dialogs/general-dialog';
+import { GeneralDialog } from '@renderer/components/dialogs/general-dialog';
+import { ViewTable } from '@renderer/components/tables/view-table';
 
-import type { GeneralDialogProps } from '~/app/components/dialogs/general-dialog';
-import type { ViewTableProps } from '~/app/components/tables/view-table';
+import type { GeneralDialogProps } from '@renderer/components/dialogs/general-dialog';
+import type { ViewTableProps } from '@renderer/components/tables/view-table';
+import type { ViewSchemaField } from '@renderer/schemas';
 import type { AnyZodObject } from 'zod';
-import type { ViewSchemaField } from '~/app/schemas';
 
 export type DetailTableDialogProps<
 	Zod extends AnyZodObject,
@@ -12,7 +12,7 @@ export type DetailTableDialogProps<
 		[K in keyof Zod['shape']]?: ViewSchemaField<Zod['shape'][K]>;
 	},
 	PK extends keyof Zod['shape'],
-	ID extends keyof Zod['shape']
+	ID extends keyof Zod['shape'],
 > = {
 	/** should the table columns be fixed width or auto? */
 	isTableAutoLayout?: boolean;
@@ -33,7 +33,7 @@ export const DetailTableDialog = <
 		[K in keyof Zod['shape']]?: ViewSchemaField<Zod['shape'][K]>;
 	},
 	PK extends keyof Zod['shape'],
-	ID extends keyof Zod['shape']
+	ID extends keyof Zod['shape'],
 >({
 	schema,
 	data,

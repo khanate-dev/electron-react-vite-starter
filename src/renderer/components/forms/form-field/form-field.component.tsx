@@ -1,28 +1,27 @@
 import { Stack } from '@mui/material';
 import { isDayjs } from 'dayjs';
 
-import { csx } from '~/app/helpers/style';
-import { FormCheckbox } from '~/app/components/forms/form-checkbox';
-import { FormDropdown } from '~/app/components/forms/form-dropdown';
-import { FormTextfield } from '~/app/components/forms/form-textfield';
-import { FormReadonly } from '~/app/components/forms/form-readonly';
-import { FormPicker } from '~/app/components/forms/form-picker';
-import { FieldActions } from '~/app/components/app/field-actions';
+import { FieldActions } from '@renderer/components/app/field-actions';
+import { FormCheckbox } from '@renderer/components/forms/form-checkbox';
+import { FormDropdown } from '@renderer/components/forms/form-dropdown';
+import { FormPicker } from '@renderer/components/forms/form-picker';
+import { FormReadonly } from '@renderer/components/forms/form-readonly';
+import { FormTextfield } from '@renderer/components/forms/form-textfield';
+import { csx } from '@renderer/helpers/style';
 
-import type { FieldAction } from '~/app/components/app/field-actions';
 import type { TextFieldProps } from '@mui/material';
-import type { FormFieldZodType, FormSchemaField } from '~/app/schemas';
+import type { FieldAction } from '@renderer/components/app/field-actions';
+import type { FormFieldZodType, FormSchemaField } from '@renderer/schemas';
+import type { App } from '@renderer/types/app';
+import type { Mui } from '@renderer/types/mui';
 
 export type FormFieldProps<
 	Type extends FormFieldZodType,
 	WorkingObj extends Obj,
 	ObjKeys extends keyof WorkingObj,
 	Field extends FormSchemaField<Type, WorkingObj>,
-	Name extends ObjKeys
-> = {
-	/** the styles to apply to the container */
-	sx?: Mui.SxProp;
-
+	Name extends ObjKeys,
+> = Mui.propsWithSx<{
 	/** the current schema field */
 	field: Field & {
 		/** the name of the field */
@@ -57,28 +56,29 @@ export type FormFieldProps<
 
 	/** should the actions use a full button instead of icon buttons? */
 	fullButtonActions?: boolean;
-} & (Field['type'] extends 'selection'
-	? {
-			/** the object containing the lists for dropdown fields */
-			options: Exclude<WorkingObj[Name], null> extends App.DropdownType
-				? App.DropdownOption<Exclude<WorkingObj[Name], null>>[]
-				: never;
-	  }
-	: Field extends { hasSuggestions: true }
-	? {
-			/** the object containing the lists for dropdown fields */
-			options: Field['type'] extends 'string' ? string[] : number[];
-	  }
-	: {
-			options?: undefined;
-	  });
+}> &
+	(Field['type'] extends 'selection'
+		? {
+				/** the object containing the lists for dropdown fields */
+				options: Exclude<WorkingObj[Name], null> extends App.dropdownType
+					? App.dropdownOption<Exclude<WorkingObj[Name], null>>[]
+					: never;
+		  }
+		: Field extends { hasSuggestions: true }
+		? {
+				/** the object containing the lists for dropdown fields */
+				options: Field['type'] extends 'string' ? string[] : number[];
+		  }
+		: {
+				options?: undefined;
+		  });
 
 export const FormField = <
 	Type extends FormFieldZodType,
 	WorkingObj extends Obj,
 	ObjKeys extends keyof WorkingObj,
 	Field extends FormSchemaField<Type, WorkingObj>,
-	Name extends ObjKeys
+	Name extends ObjKeys,
 >({
 	sx,
 	field,
@@ -132,7 +132,7 @@ export const FormField = <
 					alignItems: 'center',
 					gap: '5px',
 				},
-				sx
+				sx,
 			)}
 		>
 			{field.type === 'readonly' ? (

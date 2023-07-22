@@ -1,5 +1,7 @@
-import { PAGE_HEADER_HEIGHT } from '~/app/config';
-import { pageTransitionStyles } from '~/app/helpers/style';
+import { PAGE_HEADER_HEIGHT } from '@renderer/config';
+import { pageTransitionStyles } from '@renderer/helpers/style';
+
+import type { Mui } from '@renderer/types/mui';
 
 export const pageContainerStyles = {
 	header: {
@@ -56,4 +58,4 @@ export const pageContainerStyles = {
 			gap: 0.5,
 		},
 	},
-} satisfies Mui.SxStyleObj;
+} satisfies Mui.sxStyleObj;

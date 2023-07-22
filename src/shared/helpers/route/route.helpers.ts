@@ -1,5 +1,5 @@
+import type { App } from '@renderer/types/app';
 import type { Params } from 'react-router-dom';
-import type { App } from '~/app/types/app';
 
 export const getParamId = (params: Params): App.dbId => {
 	const id = Number(params.id);

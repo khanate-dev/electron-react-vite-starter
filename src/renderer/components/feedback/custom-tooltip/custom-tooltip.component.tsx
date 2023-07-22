@@ -1,6 +1,6 @@
 import { Tooltip } from '@mui/material';
 
-import { csx } from '~/app/helpers/style';
+import { csx } from '@renderer/helpers/style';
 
 import type { TooltipProps } from '@mui/material';
 
@@ -40,7 +40,7 @@ export const CustomTooltip = ({
 							color: 'inherit',
 						},
 					},
-					sx
+					sx,
 					// TODO fix the type error on Tooltip's sx prop
 				) as never,
 			},

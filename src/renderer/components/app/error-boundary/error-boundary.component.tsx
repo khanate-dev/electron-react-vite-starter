@@ -1,19 +1,19 @@
 import {
+	ArrowBackIosRounded as BackIcon,
+	Replay as ReloadIcon,
+} from '@mui/icons-material';
+import { Stack, Typography } from '@mui/material';
+import { EmptyPage } from '@renderer/components/containers/empty-page';
+import { CustomButton } from '@renderer/components/controls/custom-button';
+import { LogoutIcon } from '@renderer/components/media/icons';
+import { logout } from '@renderer/contexts/auth';
+import {
 	isRouteErrorResponse,
 	useNavigate,
 	useRouteError,
 } from 'react-router-dom';
-import { Stack, Typography } from '@mui/material';
-import {
-	ArrowBackIosRounded as BackIcon,
-	Replay as ReloadIcon,
-} from '@mui/icons-material';
-import { EmptyPage } from '@renderer/components/containers/empty-page';
 
-import { CustomButton } from '~/app/components/controls/custom-button';
 import { AuthError } from '~/shared/errors';
-import { logout } from '~/app/contexts/user';
-import { LogoutIcon } from '~/app/components/media/icons';
 
 export const ErrorBoundary = () => {
 	const navigate = useNavigate();
@@ -94,7 +94,9 @@ export const ErrorBoundary = () => {
 							label='Go Back'
 							variant='outlined'
 							size='small'
-							onClick={() => navigate(-1)}
+							onClick={() => {
+								navigate(-1);
+							}}
 						/>
 						<CustomButton
 							icon={<ReloadIcon />}
@@ -102,7 +104,9 @@ export const ErrorBoundary = () => {
 							variant='outlined'
 							size='small'
 							label='Reload'
-							onClick={() => navigate(0)}
+							onClick={() => {
+								navigate(0);
+							}}
 						/>
 					</>
 				)}

@@ -1,25 +1,26 @@
-import { useState } from 'react';
 import { Drawer, IconButton, List } from '@mui/material';
+import { useState } from 'react';
 
-import { dashboardRoutes } from '~/app/routes/dashboard';
-import { logout, useUser } from '~/app/contexts/user';
-import { AppLink } from '~/app/components/navigation/app-link';
-import { CustomButton } from '~/app/components/controls/custom-button';
-import { AppLogo } from '~/app/components/media/app-logo';
-import { ToggleSidebarIcon } from '~/app/components/media/icons';
+import { CustomButton } from '@renderer/components/controls/custom-button';
+import { AppLogo } from '@renderer/components/media/app-logo';
+import { ToggleSidebarIcon } from '@renderer/components/media/icons';
+import { AppLink } from '@renderer/components/navigation/app-link';
+import { logout, useUser } from '@renderer/contexts/auth';
+import { dashboardRoutes } from '@renderer/routes/dashboard';
 
-import { sidebarStyles as styles } from './sidebar.styles';
 import { SidebarItem } from './sidebar-item';
+import { sidebarStyles as styles } from './sidebar.styles';
 
+import type { UserType } from '@renderer/schemas/user';
+import type { Mui } from '@renderer/types/mui';
 import type { MouseEventHandler } from 'react';
-import type { UserType } from '~/app/schemas/user';
 
 export type TSidebarItem = {
 	/** the identifier string */
 	name: string;
 
 	/** the styles to apply on the item */
-	sx?: Mui.SxProp;
+	sx?: Mui.sxProp;
 
 	/** the label to show on the list item */
 	label?: string;
@@ -36,7 +37,7 @@ const pages = dashboardRoutes.map(
 		name: route.path,
 		label: route.label,
 		availableTo: route.availableTo,
-	})
+	}),
 );
 
 export const Sidebar = () => {
@@ -56,7 +57,7 @@ export const Sidebar = () => {
 	const navigationList: TSidebarItem[] = [...pages, ...appControls];
 
 	const availableNavigation = navigationList.filter(
-		(page) => !page.availableTo || page.availableTo.includes(userType)
+		(page) => !page.availableTo || page.availableTo.includes(userType),
 	);
 
 	return (
@@ -80,7 +81,9 @@ export const Sidebar = () => {
 			<IconButton
 				sx={styles.toggle}
 				data-rotate={isMinimized}
-				onClick={() => setIsMinimized((prev) => !prev)}
+				onClick={() => {
+					setIsMinimized((prev) => !prev);
+				}}
 			>
 				<ToggleSidebarIcon />
 			</IconButton>

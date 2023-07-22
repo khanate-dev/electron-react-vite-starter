@@ -1,4 +1,4 @@
-import { usePrevious } from '~/app/hooks/previous';
+import { usePrevious } from '@renderer/hooks/previous';
 import { objectKeys } from '~/shared/helpers/object';
 
 /** checks if the given value has changed */
@@ -21,7 +21,7 @@ export const useArrayCompare = (array: unknown[]): number[] => {
 export const useObjectCompare = <T extends Obj>(object: T): (keyof T)[] => {
 	const previousObject = usePrevious(object);
 	const changedKeys = objectKeys(object).filter(
-		(key) => object[key] !== previousObject?.[key]
+		(key) => object[key] !== previousObject?.[key],
 	);
 	return changedKeys;
 };
