@@ -6,7 +6,8 @@
 		"prettier.config.cjs",
 		".eslintrc.cjs",
 		"src/main/**/*",
-		"src/preload/**/*"
+		"src/preload/**/*",
+		".vitest/setup.ts"
 	],
 	"compilerOptions": {
 		"composite": true,
