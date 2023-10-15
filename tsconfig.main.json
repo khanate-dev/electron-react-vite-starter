@@ -6,15 +6,10 @@
 		"prettier.config.cjs",
 		".eslintrc.cjs",
 		"src/main/**/*",
-		"src/preload/**/*",
-		"src/shared/**/*"
+		"src/preload/**/*"
 	],
 	"compilerOptions": {
 		"composite": true,
-		"baseUrl": ".",
-		"types": ["electron-vite/node", "node"],
-		"paths": {
-			"@shared/*": ["./src/shared/*"]
-		}
+		"types": ["electron-vite/node", "node"]
 	}
 }
