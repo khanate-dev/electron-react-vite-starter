@@ -29,6 +29,7 @@ const config = {
 	settings: {
 		'import/resolver': {
 			typescript: true,
+			projectPaths,
 		},
 	},
 	rules: {
